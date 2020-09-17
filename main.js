@@ -1,3 +1,4 @@
 console.log("Hello World");
 console.error("This is an error");
-console.warn("This is a warning")
+const newLocal = "This is a warning";
+console.warn(newLocal)
