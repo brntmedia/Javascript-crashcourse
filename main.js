@@ -82,3 +82,195 @@ console.log(Array.isArray('Hello World'));
 
 console.log(fruits.indexOf('oranges'));
 
+//object literals-key value pairs
+const person = {
+    firstName:'John',
+    lastName:'Doe',
+    age:30,
+    hobbies:['music', 'movies', 'sports'],
+    address:{
+        street:'50 main st',
+        city:'Boston',
+        state:'MA'
+    }
+}
+
+console.log(person);
+
+console.log(person.firstName, person.lastName);
+
+console.log(person.hobbies[1]);
+
+console.log(person.address.state);
+
+//desctructoring
+
+const{firstName, lastName} = person;
+
+console.log(firstName);
+console.log(lastName);
+
+const{address:{city}}=person;//destructing an embedded variable
+
+console.log(city); 
+
+//array
+const todos=[
+    {
+        id:1,
+        text:'Take out trash',
+        isCompleted:true
+    },
+    {
+        id:2,
+        text:'Meeting with boss',
+        isCompleted:true
+    },
+    {
+        id:3,
+        text:'Dentist appointment',
+        isCompleted:false
+    }
+];
+
+console.log(todos[1].text);
+
+//jason:data format use freeformater.com
+
+/*{
+    "id": 1,
+    "text": "Take out trash",
+    "isCompleted": true
+ }*/
+ 
+ const todoJSON = JSON.stringify(todos);
+ console.log(todoJSON);
+
+ //for loops
+
+for(let i=0; i<10;i++){
+console.log(i);
+ }
+
+
+
+for(let i=0; i<9; i++){
+    console.log(`For Loop Number: ${i}`);
+}
+
+//while
+
+let i=0
+while(i<10){
+    console.log(`While Loop Number: ${i}`);
+    i++;
+}
+
+//loop through array
+
+for(let i=0; i<todos.length; i++){
+    console.log(todos[i]);
+}
+
+for (let t of todos) {
+    console.log(t.isCompleted);
+};
+
+//foreach, map, filter
+
+todos.forEach(function(t){
+    console.log(t.text);
+});
+
+const tText=todos.map(function(t){
+return t.text
+})
+
+console.log(t.text);
+
+const tCompleted=todos.filter(function(t){
+    return t.isCompleted === true;
+}).map(function(tText){
+    return t.text
+});
+console.log(tCompleted);
+
+//conditionals
+
+const r=10
+for(q=0; q<15; q++)
+
+if(q>10){
+    console.log('q is equal to or greater than 10');
+    console.log(q)
+}
+else if(q===10){
+    console.log('q equals 10');
+    console.log(q);
+}
+else{
+    console.log('q is less than 10');
+    console.log(q);
+};
+
+if(q>15 || r>10){//or
+    console.log(true);
+}
+else{
+    console.log(false);
+}
+
+if(q>13 && r>9){//and
+    console.log('and true');
+}
+
+//teranary operator:used to assign variables based on a condition
+
+const v=9;
+//const color = v>10 ? 'red' : 'blue'// ? means if, : menas else so the stament reads if v>10 then color= red, else color = blue
+const color ='green';
+console.log(color);
+
+//switches, another way to evaluate a condition
+
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');  
+        break;
+    default:
+        console.log('color is NOT red or blue');
+        break;
+}
+//functions
+
+function addNums(num1, num2){
+    console.log(num1+num2);
+}
+
+addNums(5,4);
+
+function Nums(num3=1,num4=1){
+    return num3+num4;
+};
+
+console.log(Nums(5,5)); 
+
+const arrowNums = (num5=1, num6=1) => { 
+    console.log(num5+num6);
+}
+//can also be written as const arrowNums = (num5=1, num6=1) => console.log(num5+num6);
+
+arrowNums(7,7);
+
+const soloNums = num7 =>num7+5;
+
+console.log(soloNums(11));
+
+todos.forEach((t) => console.log(t));
+
+//object oriented programming
+
+//construct objects using constructor functions with either prototypes or through es6 classes
