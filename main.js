@@ -1,4 +1,4 @@
-console.log("Hello World");
+/*console.log("Hello World");
 console.error("This is an error");
 const newLocal = "This is a warning";
 console.warn(newLocal)
@@ -7,7 +7,7 @@ console.warn(newLocal)
 var is a global variable, and can impact other variables
 const is a const varuiable that cannot be reassigned, but let can be
 let age=30;
-age=31;*/
+age=31;
 
 //console.log(age);
 
@@ -141,7 +141,7 @@ console.log(todos[1].text);
     "id": 1,
     "text": "Take out trash",
     "isCompleted": true
- }*/
+ }
  
  const todoJSON = JSON.stringify(todos);
  console.log(todoJSON);
@@ -269,8 +269,21 @@ const soloNums = num7 =>num7+5;
 
 console.log(soloNums(11));
 
-todos.forEach((t) => console.log(t));
+todos.forEach((t) => console.log(t));*/
 
 //object oriented programming
 
 //construct objects using constructor functions with either prototypes or through es6 classes
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob =new Date(dob);
+    this.get
+}
+
+//Instantiate object
+const person1 = new Person('John', 'Doe', 'April 15, 1980')
+const person2 = new Person('Mary', 'Smith', 'march, 6, 1970')
+console.log(person1);
+console.log(person2.dob.getFullYear());
+
