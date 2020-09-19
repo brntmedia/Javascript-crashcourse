@@ -269,7 +269,7 @@ const soloNums = num7 =>num7+5;
 
 console.log(soloNums(11));
 
-todos.forEach((t) => console.log(t));*/
+todos.forEach((t) => console.log(t));
 
 //object oriented programming
 
@@ -277,13 +277,42 @@ todos.forEach((t) => console.log(t));*/
 function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.dob =new Date(dob);
-    this.get
+    this.dob =new Date(dob);        
+    }
+
+Person.prototype.getBirthYear=function(){
+    return this.dob.getFullYear();
+}
+
+Person.prototype.getFullName=function(){
+    return `${this.firstName} ${this.lastName}`;
+}*/
+
+//class
+class Person{
+    constructor(firstName,lastName,dob){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob =new Date(dob);   
+    }
+    getBirthYear(){
+        return this.dob.getFullYear();
+    }
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
 
 //Instantiate object
 const person1 = new Person('John', 'Doe', 'April 15, 1980')
-const person2 = new Person('Mary', 'Smith', 'march, 6, 1970')
+const person2 = new Person('Mary', 'Smith', 'March, 6, 1970')
 console.log(person1);
 console.log(person2.dob.getFullYear());
+
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
+
+console.log(person1);
+
+console.log(person2.getFullName());
 
