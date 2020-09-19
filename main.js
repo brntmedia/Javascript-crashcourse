@@ -319,4 +319,3 @@ console.log(person2.getFullName());
 
 
 //DOM
-test
