@@ -286,7 +286,7 @@ Person.prototype.getBirthYear=function(){
 
 Person.prototype.getFullName=function(){
     return `${this.firstName} ${this.lastName}`;
-}*/
+}
 
 //class
 class Person{
@@ -315,4 +315,7 @@ console.log(person1.getFullName());
 console.log(person1);
 
 console.log(person2.getFullName());
+*/
 
+
+//DOM
